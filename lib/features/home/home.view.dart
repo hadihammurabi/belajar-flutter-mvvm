@@ -4,6 +4,7 @@ import 'package:phonebookapp/features/home/contact.model.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
+  static String name = 'HomePage';
   const HomePage({Key? key}) : super(key: key);
 
   @override

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:phonebookapp/features/home/home.view.dart';
 import 'package:phonebookapp/features/home/home.viewmodel.dart';
+import 'package:phonebookapp/router.dart' as AppRouter;
 import 'package:provider/provider.dart';
 
 void main() {
@@ -21,9 +22,10 @@ class _PhonebookappState extends State<Phonebookapp> {
       providers: [
         ChangeNotifierProvider(create: (c) => HomeViewModel()),
       ],
-      child: const MaterialApp(
+      child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: HomePage(),
+        routes: AppRouter.Router.init(),
+        initialRoute: HomePage.name,
       ),
     );
   }
